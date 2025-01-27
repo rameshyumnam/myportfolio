@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body {
+            padding: 25px;
+            padding-top: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, rgb(155, 248, 255), rgb(53, 53, 150));
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        nav {
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: space-between;
+            position: sticky;
+            top: 10px;
+        }
+        h1 {
+            font-size: 35px;
+            margin: 0;
+            text-shadow: 0px 2px 3px black;
+            font-weight: bolder;
+            color: rgb(47, 47, 253);
+        }
+        ul>li {
+            font-weight: bold;
+            display: flex;
+            column-gap: 50px;
+            list-style-type: none;
+        }
+        ul>li>a {
+            text-decoration: none;
+            color: rgb(0, 255, 255);
+            font-size: 18px;
+            cursor: pointer;
+            text-shadow: 0px 4px 6px black;
+        }nav>ul>li>a:hover {
+            color: #55ff71;
+            transition: 0.5s;
+        }
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 80px;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info>p {
+            text-align: left;
+            font-size: 25px;
+        }
+        p {
+            font-weight: bold;
+            font-size: 15px;
+            color: rgb(66, 26, 104);
+            text-align: center;
+        }
+        .info>h1 {
+            color: rgb(20, 19, 71);
+        }
+        .image>img {
+            height: 52vh;
+            width: 50vh;
+            filter: drop-shadow(2px 4px 12px black);
+        }
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+        h2 {
+            font-size: 28px;
+            color: rgb(20, 19, 71);
+            text-shadow: 0px 1px 2px black;
+        }
+        .bout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .me {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0px 40px;
+        }
+        .imag>img {
+            height: 50vh;
+            width: 52vh;
+            filter: drop-shadow(2px 4px 12px black);
+        }
+        #project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 35px;
+        }
+        h3 {
+            color: rgb(31, 3, 56);
+        }
+        .page {
+            display: flex;
+            column-gap: 30px;
+        }
+        .p1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 2px 6px black;
+            padding: 15px;
+            border: 2px solid navy;
+            border-radius: 0 0 15px 15px;
+            border-top: 2px solid rgb(92, 0, 100);
+            background: linear-gradient(to right, rgb(131, 218, 252), rgb(82, 82, 209));
+        }
+        .p1>a {
+            background: rgb(0, 0, 126);
+            text-decoration: none;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        #contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            padding-top: 35px;
+        }
+        i {
+            color: rgb(0, 0, 161);
+            font-size: 25px;
+        }
+        @media (max-width: 950px) {
+            .image>img{
+                width: auto;
+            }
+            .imag>img {
+                height: 50vh;
+                width: 48vh;
+            }
+        }
+        @media (max-width: 900px) {
+            .image>img {
+                height: 50vh;
+                width: 48vh;
+            }
+            .info>p {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 850px) {
+            .image>img {
+                height: 48vh;
+                width: 46vh;
+            }
+            .imag>img {
+                height: 46vh;
+                width: 48vh;
+            }
+            .me {
+                padding: 20px;
+            }
+        }
+        @media (max-width: 780px) {
+            h2 {
+                font-size: 25px;
+            }
+            ul>li>a {
+                font-size: 16px;
+            }
+            #home {
+                padding-top: 50px;
+            }
+            #about {
+                padding-top: 35px;
+            }
+            .image>img {
+                height: 46vh;
+                width: 44vh;
+            }
+            .imag>img {
+                height: 44vh;
+                width: 46vh;
+            }
+            #about {
+                padding-top: 50px;
+            }
+            .bout {
+                row-gap: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            #project {
+                padding-top: 50px;
+            }
+        }
+        @media(max-width: 700px) {
+            .image>img {
+                height: 44vh;
+                width: 42vh;
+            }
+            .imag>img {
+                height: 40vh;
+                width: 42vh;
+            }
+            .info>p {
+                font-size: 18px;
+                text-align: center;
+            }
+            .page {
+                column-gap: 10px;
+            }
+            .p1>p {
+                font-size: 13px;
+            }
+        }
+        @media (max-width: 650px) {
+            p {
+                font-size: 13px;
+            }
+            nav>ul>li {
+                column-gap: 25px;
+            }
+            nav>ul>li>a {
+                font-size: 15px;
+            }.image>img {
+                height: 42vh;
+                width: 40vh;
+            }
+            .imag>img{
+                height: 38vh;
+                width: 40vh;
+                padding-top: 20px;
+            }
+            .p1 {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav>h1 {
+                display: flex;
+                justify-content: center;
+            }
+            nav>ul>li {
+                display: flex;
+                column-gap: 30px;
+            }
+            #home {
+                padding-top: 100px;
+            }
+            #about {
+                padding-top: 100px;
+            }
+            #project {
+                padding-top: 100px;
+            }
+            .image>img {
+                height: 40vh;
+                width: 38vh;
+            }
+            .info>p {
+                text-align: center;
+            }
+            .info>h1 {
+                text-align: center;
+            }
+            .bout {
+                flex-direction: column;
+            }
+            .page {
+                flex-wrap: wrap;
+                row-gap: 10px;
+            }
+        }
+        @media (max-width: 550px) {
+            .me {
+                padding: 20px;
+            }
+            #project {
+                padding-top: 60px;
+            }
+            #contact>ul>li>a>i {
+                font-size: 20px; 
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 13px;
+                text-align: center;
+            }
+            nav>ul>li {
+                column-gap: 30px;
+                justify-content: flex-start;
+            }
+            ul>li>a {
+                font-size: 13px;
+            }
+            .image>img {
+                height: 36vh;
+                width: 34vh;
+            }
+            #about {
+                padding-top: 70px;
+            }
+            .bout {
+                row-gap: 15px;
+            }
+           .imag>img {
+               height: 32vh;
+               width: 34vh;
+           }
+           .me {
+               padding: 0;
+           }
+           #project {
+               padding-top: 70px;
+           }
+        }@media (max-width: 450px) {
+            nav>ul>li {
+                column-gap: 20px;
+            }
+            nav>ul>li>a {
+                font-size: 14px;
+            }
+            .image>img {
+                height: 34vh;
+                width: 32vh;
+            }
+            .imag>img {
+                height: 30vh;
+                width: 32vh;
+            }
+            #contact>ul>li {
+                display: flex;
+                column-gap: 25px;
+                padding-right: 40px;
+            }
+        }
+        @media (max-width: 440px) {
+            nav>ul>li {
+                display: flex;
+                column-gap: 20px;
+            }
+            i {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 412px) {
+            nav>ul>li {
+                column-gap: 18px;
+                position: absolute;
+                left: 28px;
+            }
+            .image>img {
+                height: 30vh;
+                width: 28vh;
+            }
+            .info>p {
+                font-size: 16px;
+            }
+            .imag>img {
+                width: 30vh;
+                height: 28vh;
+            }
+        }
+        @media (max-width: 400px) {
+            nav>ul>li {
+                column-gap: 16px;
+            }
+            nav>ul>li>a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Ra<span style="color: rgb(49, 48, 110);">mesh.</span></h1>
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#project">My Projects</a>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="image">
+            <img src="photo/1737954330789.png" alt="">
+        </div>
+        <div class="info">
+            <p>Hi!</p>
+            <h1>I am Y.Ramesh</h1>
+            <p>I AM A PASSIONATE AND HARDWORKING FRONTEND DEVELOPER.</p>
+         </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="bout">
+            <div class="imag">
+                <img src="photo/1737953968930.png" alt="">
+            </div>
+            <div class="me">
+                <p>
+                 My name is Y.Ramesh. I am a curious, dedicated and hardworking with a passion for 
+                 learning and growth. With a strong interest in <span style="color: #217272;">Web Development</span>, I enjoy exploring the world 
+                 of Technology and creating meaningful solutions. I am dedicated to expanding my skills, sharing 
+                 knowledge and contributing to positive change. My journey is driven by a desire to learn, innovate 
+                 and make a lasting impact in the digital world.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="project">
+        <h2>My Projects</h2>
+        <p>
+            Below you can see some of my recent projects. You can view it just by tapping the view project option.
+        </p>
+        <div class="page">
+            <div class="p1">
+                <h3>Rotating Gallery</h3>
+                <p>A rotating gallery is a dynamic display of images that changes automatically or manually
+                    at set intervals.
+                </p>
+                <a href="rotatinggallery.html">view project</a>
+            </div>
+            <div class="p1">
+                <h3>Landing Page</h3>
+                <p>
+                    A landing page is a standalone web page specifically designed to guide visitors toward
+                    a particular goal or action.
+                </p>
+                <a href="LandingPage.html">view project</a>
+            </div>
+            <div class="p1">
+                <h3>Calculator</h3>
+                <p>
+                    It is a page used to perform mathematical calculations such as, addition, substraction, division etc. 
+                </p>
+                <a href="calculator.html">view project</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>I am always open to discussing new projects, creative ideas, or opportunities to be a part of your vision.
+            Feel free to connect with me with the links given below.
+        </p>
+        <p>Let me know if you would like an additional suggestions!</p>
+        <h3>Y.Ramesh</h3>
+        <p>Email: rameshyumnam3@gmail.com</p>
+        <p>Phone: +916009945353</p>
+        <ul>
+            <li>
+                <a href="https://wa.me/916009945353"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:rameshyumnam3@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/pc_manmuy?igsh=MW0wZGI3NDY4NGJmMA=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100059709459173"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://telegram.org/dl"><i class="fa-brands fa-telegram"></i></a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
